@@ -22,13 +22,13 @@ tada = c(2);
 
 end
 
-x = linspace(1,4,4);
+x = linspace(-1,1,50);
 disp(x);
 
-b = 3;
+b = 2;
 
 for i=1:50
-  j = tay(x, b);
+  j(i) = tay(x, b);
 end
 
 disp(j);
