@@ -31,7 +31,6 @@ function a = sec(x)
     tolerance = b(x);
     disp(x);
   end
-  disp('new x');
   
 
 
