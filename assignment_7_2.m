@@ -1,12 +1,12 @@
 %section 3.3 C #6a
 
-%put the puction in
+%put the function in
 f = @b;
 g = @b_prime;
 h = @sec;
 i = @newton;
 
-%call the secant method function with initial guess
+%call the secant & newton method functions with the initial guess
 h(2);
 
 i(2);
