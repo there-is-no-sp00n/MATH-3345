@@ -4,9 +4,12 @@
 f = @b;
 g = @b_prime;
 h = @sec;
+i = @newton;
 
 %call the secant method function with initial guess
 h(2);
+
+i(2);
 
 
 %function for x^3 - 3x + 1
@@ -24,6 +27,7 @@ end
 
 %function to implement the secant method
 function a = sec(x)
+  disp('secant');
   tolerance = b(x);
 
   while abs(tolerance > 0.001)
@@ -31,7 +35,20 @@ function a = sec(x)
     tolerance = b(x);
     disp(x);
   end
-  
-
 
 end
+
+%function to implement the newton method
+function a = newton(x)
+  disp('newton');
+  tolerance = 0.001;
+  
+  while abs(b(x)) > tolerance;
+    y = x - (b(x)/b_prime(x));
+    x = y;
+    disp(x);
+  end
+  
+
+end
+  
