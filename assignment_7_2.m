@@ -5,9 +5,9 @@ f = @b;
 g = @b_prime;
 h = @sec;
 
-i = sec(2);
+%call the secant method function
+h(2);
 
-disp(i);
 
 
 %function for x^3 - 3x + 1
@@ -17,11 +17,13 @@ function a = b(x)
   a = a + 1;
 end
 
+%function for the derivative 3x^2 - 3
 function a = b_prime(x)
   a = 3*x^2;
   a = a +3;
 end
 
+%function to implement the secant method
 function a = sec(x)
   tolerance = b(x);
 
@@ -29,5 +31,7 @@ function a = sec(x)
     x = x - (b(x)/b_prime(x));
     tolerance = b(x);
   end
+  
+  disp(x);
 
 end
