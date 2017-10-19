@@ -5,9 +5,8 @@ f = @b;
 g = @b_prime;
 h = @sec;
 
-%call the secant method function
+%call the secant method function with initial guess
 h(2);
-
 
 
 %function for x^3 - 3x + 1
@@ -30,8 +29,10 @@ function a = sec(x)
   while abs(tolerance > 0.001)
     x = x - (b(x)/b_prime(x));
     tolerance = b(x);
+    disp(x);
   end
+  disp('new x');
   
-  disp(x);
+
 
 end
