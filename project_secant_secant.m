@@ -4,20 +4,19 @@ nmax= 100;
 epsilon= 0.0001;
 
 for i=1:nmax
-  p = myfunction(b);
-  x1 = b - p*(a-b)/(myfunction(a) - p);
-  if abs((x1 - b)/b) < epsilon
-    solution = x1;
+  c = b - myfunction(b)*(a-b)/(myfunction(a) - myfunction(b));
+  if abs((c - b)/b) < epsilon
+    solution = c;
     break
   end  
   a = b;
-  b = x1;
+  b = c;
   
-  disp(x1)
-  disp(i);
+  %disp(x1)
+  %disp(i);
 end
 
-disp(x1)
+disp(c)
 disp(i);
 
 
