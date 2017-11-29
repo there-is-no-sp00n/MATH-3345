@@ -3,21 +3,27 @@ b= 10;
 nmax= 100;
 epsilon= 0.0001;
 
+tic
 for i=1:nmax
   c = b - myfunction(b)*(a-b)/(myfunction(a) - myfunction(b));
   if abs((c - b)/b) < epsilon
     solution = c;
+    disp(i)
+    disp(solution)
     break
   end  
   a = b;
   b = c;
   
-  %disp(x1)
-  %disp(i);
+  disp(i)
+  disp(c)
 end
+toc
 
-disp(c)
-disp(i);
+%disp(toc)
+
+%disp(c);
+%disp(i);
 
 
 function f= myfunction(y)
